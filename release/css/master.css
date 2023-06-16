@@ -267,6 +267,7 @@ main section#info .action-card .info-wrapper {
 
 main section#info .action-card .info-wrapper h2, main section#info .action-card .info-wrapper .sub-action .title, main section#info .sub-action .action-card .info-wrapper .title {
     margin: 0;
+    text-transform: uppercase;
 }
 
 main section#info .action-card .info-wrapper .separator {
