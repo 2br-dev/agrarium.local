@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+	<link rel="stylesheet" href="/css/materialize.css">
+	<link rel="stylesheet" href="/css/master.css">
+</head>
+<body>
+	<header>
+		<div class="container">
+			<div class="row flex vcenter">
+				<div class="col l6 s3 xs3 t3">
+					<a href="/" class="logo">
+						<img class="desktop" src="/img/logo_header.svg" alt="">
+						<img class="mobile" src="/img/logo_leaf.svg" alt="">
+					</a>
+				</div>
+				<div class="col l6 s9 xs9 t9 right-align">
+					<a href="" class="bttn-outline">на основной сайт</a>
+				</div>
+			</div>
+		</div>
+	</header>
+	<main>
+		<section id="hero">
+			<!-- Обратный счётчик -->
+			<div class="container hide">
+				<div class="row">
+					<div class="col xl6 offset-xl3 l8 offset-l2 m8 offset-m2 s12 center-align">
+						<h1>Подача документов через:</h1>
+						<div class="countdown">
+							<div class="cd-part">
+								<p id="dd-value">00</p>
+								<span>Дней</span>
+								<div class="countdown-image">
+									<svg width="239" height="239" viewBox="0 0 239 239" fill="none" xmlns="http://www.w3.org/2000/svg">
+										<circle cx="119.5" cy="119.5" r="111" fill="#FBFBFD" fill-opacity="0.3" stroke="#393939" stroke-width="15"/>
+									</svg>
+									<svg width="239" height="239" viewBox="0 0 239 239" fill="none" xmlns="http://www.w3.org/2000/svg" id="d-circle">
+										<circle cx="119.5" cy="119.5" r="111" stroke="#71B73F" stroke-width="15" stroke-linecap="round"/>
+									</svg>
+								</div>
+							</div>
+							<div class="cd-part">
+								<p id="hh-value">00</p>
+								<span>Часов</span>
+								<div class="countdown-image">
+									<svg width="239" height="239" viewBox="0 0 239 239" fill="none" xmlns="http://www.w3.org/2000/svg">
+										<circle cx="119.5" cy="119.5" r="111" fill="#FBFBFD" fill-opacity="0.3" stroke="#393939" stroke-width="15"/>
+									</svg>
+									<svg width="239" height="239" viewBox="0 0 239 239" fill="none" xmlns="http://www.w3.org/2000/svg" id="h-circle">
+										<circle cx="119.5" cy="119.5" r="111" stroke="#71B73F" stroke-width="15" stroke-linecap="round"/>
+									</svg>
+								</div>
+							</div>
+							<div class="cd-part">
+								<p id="mm-value">00</p>
+								<span>Минут</span>
+								<div class="countdown-image">
+									<svg width="239" height="239" viewBox="0 0 239 239" fill="none" xmlns="http://www.w3.org/2000/svg">
+										<circle cx="119.5" cy="119.5" r="111" fill="#FBFBFD" fill-opacity="0.3" stroke="#393939" stroke-width="15"/>
+									</svg>
+									<svg width="239" height="239" viewBox="0 0 239 239" fill="none" xmlns="http://www.w3.org/2000/svg" id="m-circle">
+										<circle cx="119.5" cy="119.5" r="111" stroke="#71B73F" stroke-width="15" stroke-linecap="round"/>
+									</svg>
+								</div>
+							</div>
+							<div class="cd-part">
+								<p id="ss-value">00</p>
+								<span>Секунд</span>
+								<div class="countdown-image">
+									<svg width="239" height="239" viewBox="0 0 239 239" fill="none" xmlns="http://www.w3.org/2000/svg">
+										<circle cx="119.5" cy="119.5" r="111" fill="#FBFBFD" fill-opacity="0.3" stroke="#393939" stroke-width="15"/>
+									</svg>
+									<svg width="239" height="239" viewBox="0 0 239 239" fill="none" xmlns="http://www.w3.org/2000/svg" id="s-circle">
+										<circle cx="119.5" cy="119.5" r="111" stroke="#71B73F" stroke-width="15" stroke-linecap="round"/>
+									</svg>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="row">
+					<div class="col l4 offset-l4 m6 offset-m3 s8 offset-s2 xs10 offset-xs1 t12 center-align">
+						<p>Приём документов для поступления начнётся 20 июня в 00:00 по МСК</p>
+					</div>
+				</div>
+			</div>
+			<!-- /Обратный счётчик -->
+			<!-- Счётчик завершён -->
+			<div class="container">
+				<div class="row">
+					<div class="col l6 offset-l3 m8 offset-m2 s12">
+						<div class="complete-wrapper center-align">
+							<h1>Приём документов для поступления начался</h1>
+							<a href="#info" class="more-button">
+								<img src="/img/down-arrow.svg">
+							</a>
+							<p>Осталось выбрать подходящий способ</p>
+						</div>
+					</div>
+				</div>
+			</div>
+			<!-- Счётчик завершён -->
+		</section>
+		<section id="info">
+			<div class="container">
+				<div class="row flex">
+					@@loop('./parts/action-card.html', './data/actions.json')
+				</div>
+				<div class="row sub-actions flex">
+					<div class="col l4 m8 s12">
+						<a class="sub-action gradient" href="tel://+78612215881">
+							<div class="title">
+								КубГАУ всегда на связи
+							</div>
+							<div class="separator"></div>
+							<div class="flex">
+								<div class="fleft">
+									<p>Многоканальный колл-центр</p>
+									<p class="number">+7(861)221-58-81</p>
+								</div>
+								<div class="fright">
+									<img src="/img/phone.png" alt="">
+								</div>
+							</div>
+						</a>
+					</div>
+					<div class="col l2 m4 s6 xs6 t6">
+						<a class="sub-action green q" href="">
+							<div class="title">
+								Ин&shy;фор&shy;ма&shy;ция<br> о приёме
+							</div>
+							<div class="separator"></div>
+							<div class="flex">
+								<div class="fleft"></div>
+								<div class="fright">
+									<img src="/img/doc_exclamination.png" alt="">
+								</div>
+							</div>
+						</a>
+					</div>
+					<div class="col l2 m4 s6 xs6 t6">
+						<a class="sub-action green q" href="">
+							<div class="title">
+								Кто уже подал <br>документы
+							</div>
+							<div class="separator"></div>
+							<div class="flex">
+								<div class="fleft"></div>
+								<div class="fright">
+									<img src="/img/doc_account.png" alt="">
+								</div>
+							</div>
+						</a>
+					</div>
+					<div class="col l4 m8 s12">
+						<a class="sub-action white" href="">
+							<div class="title">Решим все вопросы вместе!</div>
+							<div class="separator"></div>
+							<div class="flex">
+								<div class="fleft"><img src="/img/gosuslugi.svg" alt=""></div>
+							</div>
+						</a>
+					</div>
+				</div>
+			</div>
+		</section>
+	</main>
+	<footer>
+		<div class="container center-align">
+			<div class="row">
+				<div class="col lx6 offset-xl3 l8 offset-l2 s12">
+					<div class="buttons-wrapper">
+						<a href="" class="bttn-white">на основной сайт</a>
+						<a href="" class="bttn-outline">
+							<img src="/img/rf_coa.svg" alt="">
+							<span>сведения об образовательной организации</span>
+						</a>
+					</div>
+					<p>
+						2022 ФГБОУ ВО «Кубанский Государственный Аграрный Университет имени И.Т. Трубилина»
+					</p>
+					<p>
+						350044, Россия, г. Краснодар, ул. Калинина, 13
+					</p>
+					<img src="/img/2br.svg" alt="">
+					<p>дизайн страницы – <a href="https://2br.agency" class="underline">2br.agency</a></p>
+				</div>
+			</div>
+		</div>
+	</footer>
+	<script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+	<script src="/js/master.js"></script>
+</body>
+</html>

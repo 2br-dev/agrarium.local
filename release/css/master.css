@@ -1,0 +1,402 @@
+body {
+    font-family: 'Bliss Pro';
+    font-size: clamp(16px, 2vw, 18px);
+}
+
+body h1 {
+    font-size: clamp(36px, 2vw, 64px);
+    text-transform: uppercase;
+}
+
+body h2, body main section#info .sub-action .title, main section#info .sub-action body .title {
+    font-size: clamp(24px, 2vw, 32px);
+    font-weight: 600;
+}
+
+header {
+    position: absolute;
+    z-index: 5;
+    width: 100%;
+    top: 40px;
+}
+
+header .row {
+    margin: 0;
+}
+
+header a {
+    color: #fff;
+}
+
+header a .mobile {
+    display: none;
+}
+
+@media (max-width: 600px) {
+    header a .desktop {
+        display: none;
+    }
+
+    header a .mobile {
+        display: block;
+    }
+}
+
+.bttn, .bttn-outline, .bttn-green, .bttn-white {
+    display: inline-block;
+    padding: .8em 2em;
+}
+
+.bttn-outline {
+    box-shadow: 0 0 0 1px rgba(255, 255, 255, 0.5) inset;
+}
+
+.bttn-outline:hover {
+    box-shadow: 0 0 0 1px #fff inset;
+}
+
+.bttn-green {
+    background-color: #71B73F;
+}
+
+.bttn-green:hover {
+    background-color: #52b909;
+    box-shadow: 0 0 0 1px #fff inset;
+}
+
+.bttn-white {
+    background-color: rgba(255, 255, 255, 0.2);
+}
+
+.bttn-white:hover {
+    box-shadow: 0 0 0 1px #fff inset;
+}
+
+main {
+    overflow: hidden;
+}
+
+main section {
+    margin: 4vmax 0;
+}
+
+main section#hero {
+    min-height: 95vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-image: url(../img/hero.jpg);
+    background-size: cover;
+    background-position: center center;
+    margin-top: 0;
+    position: relative;
+    color: #fff;
+}
+
+@media (max-width: 600px) {
+    main section#hero {
+        min-height: 100vh;
+    }
+}
+
+main section#hero .container {
+    position: relative;
+    z-index: 1;
+}
+
+main section#hero .container p {
+    color: #fff;
+    font-size: clamp(18px, 2vw, 28px);
+}
+
+main section#hero .container .complete-wrapper {
+    transform: translateY(-20%);
+}
+
+main section#hero .container .complete-wrapper .more-button {
+    border: 1px solid #fff;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: -moz-fit-content;
+    width: fit-content;
+    margin: auto;
+    width: 60px;
+    height: 60px;
+    aspect-ratio: 1 / 1;
+    transition: background-color .2s;
+}
+
+main section#hero .container .complete-wrapper .more-button:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+}
+
+main section#hero .countdown {
+    display: flex;
+}
+
+main section#hero .countdown .cd-part {
+    width: 10px;
+    flex-grow: 1;
+    aspect-ratio: 1 / 1;
+    position: relative;
+    margin: clamp(1px, 1vw, 20px);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+main section#hero .countdown .cd-part span {
+    font-size: clamp(12px, 2vw, 18px);
+    text-transform: lowercase;
+}
+
+main section#hero .countdown .cd-part p {
+    color: #fff;
+    font-size: clamp(42px, 8vw, 100px);
+    line-height: 1em;
+    margin: 0;
+}
+
+main section#hero .countdown .cd-part .countdown-image svg {
+    position: absolute;
+    z-index: -1;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: auto;
+    transform: rotate(-90deg) scaleY(-1);
+}
+
+main section#hero .countdown .cd-part .countdown-image #d-circle, main section#hero .countdown .cd-part .countdown-image #h-circle, main section#hero .countdown .cd-part .countdown-image #m-circle, main section#hero .countdown .cd-part .countdown-image #s-circle {
+    stroke-dasharray: 697.5px;
+    stroke-dashoffset: 697.5px;
+}
+
+main section#info {
+    position: relative;
+    margin-top: 0;
+}
+
+main section#info:before {
+    content: '';
+    display: block;
+    background-color: #EAFFCF;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 120%;
+    height: 160%;
+    transform: rotate(-10deg) skew(-10deg) translate(-50%, -65%);
+}
+
+@media (min-width: 1900px) {
+    main section#info:before {
+        transform: rotate(-10deg) skew(-10deg) translate(-50%, -72%);
+    }
+}
+
+@media (max-width: 800px) {
+    main section#info:before {
+        transform: rotate(-10deg) skew(-10deg) translate(-50%, -60%);
+    }
+}
+
+@media (max-width: 1200px) {
+    main section#info:before {
+        height: 130%;
+    }
+}
+
+@media (max-width: 800px) {
+    main section#info:before {
+        height: 100%;
+    }
+}
+
+main section#info .container {
+    position: relative;
+    z-index: 1;
+}
+
+main section#info .col {
+    margin-bottom: 20px;
+}
+
+main section#info .action-card {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+main section#info .action-card .img-wrapper {
+    height: -moz-fit-content;
+    height: fit-content;
+}
+
+main section#info .action-card .img-wrapper img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    aspect-ratio: 4 / 3;
+    -o-object-fit: cover;
+    object-fit: cover;
+    -o-object-position: top right;
+    object-position: top right;
+    height: auto;
+}
+
+main section#info .action-card .info-wrapper {
+    background: linear-gradient(to bottom, #C3DCAA, #218A3D);
+    padding: 20px;
+    color: #fff;
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+main section#info .action-card .info-wrapper h2, main section#info .action-card .info-wrapper .sub-action .title, main section#info .sub-action .action-card .info-wrapper .title {
+    margin: 0;
+}
+
+main section#info .action-card .info-wrapper .separator {
+    flex-grow: 1;
+    min-height: 2rem;
+}
+
+main section#info .action-card .info-wrapper a {
+    color: #fff;
+}
+
+@media (max-width: 1200px) {
+    main section#info .action-card {
+        flex-direction: row;
+    }
+
+    main section#info .action-card .img-wrapper {
+        height: 100%;
+        width: 50%;
+        aspect-ratio: 1 / 1;
+    }
+
+    main section#info .action-card .img-wrapper img {
+        aspect-ratio: unset;
+        height: 100%;
+    }
+}
+
+@media (max-width: 750px) {
+    main section#info .action-card {
+        flex-direction: column;
+    }
+
+    main section#info .action-card .img-wrapper {
+        width: unset;
+        height: unset;
+        aspect-ratio: unset;
+    }
+
+    main section#info .action-card .img-wrapper img {
+        aspect-ratio: 4 / 3;
+        height: unset;
+    }
+}
+
+main section#info .sub-action {
+    height: 100%;
+    padding: 20px;
+    box-sizing: border-box;
+    color: #fff;
+    overflow: hidden;
+    transition: box-shadow .2s, transform .2s;
+    display: flex;
+    flex-direction: column;
+}
+
+main section#info .sub-action.gradient {
+    background: radial-gradient(circle at right center, #B3D496, #238B3E);
+}
+
+main section#info .sub-action.gradient img {
+    width: 80px !important;
+}
+
+main section#info .sub-action.gradient .number {
+    font-size: clamp(24px, 2.2vw, 48px);
+    font-weight: 700;
+}
+
+main section#info .sub-action.white {
+    color: #333;
+    background-image: url(../img/gosuslugi_long.jpg);
+    background-position: bottom right;
+    background-repeat: no-repeat;
+    background-size: 60% auto;
+}
+
+main section#info .sub-action .separator {
+    flex-grow: 1;
+    min-height: 20px;
+}
+
+main section#info .sub-action .flex {
+    display: flex;
+    align-items: center;
+}
+
+main section#info .sub-action .flex .fleft {
+    flex-grow: 1;
+}
+
+main section#info .sub-action .flex p {
+    margin: 0;
+}
+
+main section#info .sub-action .flex img {
+    width: 120px;
+    filter: drop-shadow(6px 6px 12px rgba(0, 0, 0, 0.25));
+}
+
+main section#info .sub-action:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 125px 80px rgba(33, 61, 35, 0.07), 0 81px 46px rgba(33, 61, 35, 0.07), 0 48px 25px rgba(33, 61, 35, 0.07);
+}
+
+footer {
+    padding: 2vmax 0;
+    background-color: #666666;
+    color: #fff;
+}
+
+footer .buttons-wrapper {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+footer a {
+    color: #fff;
+    display: inline-flex !important;
+    align-items: center;
+    margin: 0 6px;
+}
+
+@media (max-width: 600px) {
+    footer a {
+        width: 100%;
+        text-align: center;
+        justify-content: center;
+        margin-bottom: 20px;
+    }
+}
+
+footer a img {
+    margin-right: 10px;
+}
+
+footer a.underline {
+    text-decoration: underline;
+}

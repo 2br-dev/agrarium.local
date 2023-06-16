@@ -1,0 +1,22 @@
+[
+	{
+		"title": "Лично <br>в приёмную <br>комиссию",
+		"img": "/img/personal.jpg",
+		"class": "col l3 m6 s6 xs6 t12"
+	},
+	{
+		"title": "Через личный<br> кабинет",
+		"img": "/img/lk.jpg",
+		"class": "col l3 m6 s6 xs6 t12"
+	},
+	{
+		"title": "Через<br> Госуслуги",
+		"img": "/img/gosuslugi.jpg",
+		"class": "col l3 m6 s6 xs6 t12"
+	},
+	{
+		"title": "Письмом<br>по почте",
+		"img": "/img/post.jpg",
+		"class": "col l3 m6 s6 xs6 t12"
+	}
+]
