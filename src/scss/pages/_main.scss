@@ -101,6 +101,10 @@ main{
 
 					transform: translateY(-20%);
 
+					@media(max-width: 600px){
+						transform: none;
+					}
+
 					& .more-button{
 						border: 1px solid #fff;
 						border-radius: 50%;
@@ -196,10 +200,10 @@ main{
 				@media(max-width: $medium){
 					transform: rotate(-#{$deg}deg) skew(-#{$deg}deg) translate(-50%, -60%);
 				}
-
 				
 				@media(max-width: $large){
-					height: 130%;
+					transform: rotate(-#{$deg}deg) skew(-#{$deg}deg) translate(-50%, -55%);
+					height: 120%;
 				}
 			}
 

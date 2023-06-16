@@ -114,6 +114,12 @@ main section#hero .container .complete-wrapper {
     transform: translateY(-20%);
 }
 
+@media (max-width: 600px) {
+    main section#hero .container .complete-wrapper {
+        transform: none;
+    }
+}
+
 main section#hero .container .complete-wrapper .more-button {
     border: 1px solid #fff;
     border-radius: 50%;
@@ -207,7 +213,8 @@ main section#info:before {
 
 @media (max-width: 1200px) {
     main section#info:before {
-        height: 130%;
+        transform: rotate(-10deg) skew(-10deg) translate(-50%, -55%);
+        height: 120%;
     }
 }
 
